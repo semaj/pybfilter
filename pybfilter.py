@@ -23,9 +23,6 @@ class BFilter:
         for i in range(0, self.nhashfuncs):
             index = self.hash(i, data)
             position = 1 << (7 & index)
-            print(index >> 3)
-            print(position)
-            print("--")
             self.vdata[index >> 3] |= position
         return self
 
